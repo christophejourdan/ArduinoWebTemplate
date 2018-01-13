@@ -1,0 +1,16 @@
+{
+  "name": "ArduinoWebTemplate",
+  "keywords": "web, html, http, text, template",
+  "description": "Library to handle Html or text templates",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christophejourdan/arduinowebtemplate.git"
+  },
+  "version": "0.1",
+  "authors": {
+    "name": "Christophe Jourdan",
+    "url": "https://www.christophejourdan.com"
+  },
+  "frameworks": "arduino",
+  "platforms": "*"
+}
