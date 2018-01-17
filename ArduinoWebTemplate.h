@@ -3,7 +3,7 @@
   Created by Christophe Jourdan, January 12, 2018.
   https://github.com/christophejourdan/arduinowebtemplate
   If you like this project, please add a star!
-  Version: 0.1
+  Version: 0.2
 */
 
 
@@ -34,12 +34,14 @@ class ArduinoWebTemplate
    char* getBody();
    void setBody(char* body);
    String render();
-   String render(Data * values);
+   template<typename T, size_t n> String render(T (&)[n]);
 
  private:
   char* header;
   char* footer;
   char* body;
 };
+
+#include "ArduinoWebTemplate.hpp"
 
 #endif

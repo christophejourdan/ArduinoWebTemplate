@@ -3,7 +3,7 @@
   Created by Christophe Jourdan, January 12, 2018.
   https://github.com/christophejourdan/arduinowebtemplate
   If you like this project, please add a star!
-  Version: 0.1
+  Version: 0.2
 */
 
 #include "Arduino.h"
@@ -95,20 +95,5 @@ void ArduinoWebTemplate::setBody(char* body){
 String ArduinoWebTemplate::render()
 {
   return String(this->header) + String(this->body) + String(this->footer);
-}
-
-/*
- * Render the template, replace the variables by the values
- * Variables must be like {{variable}}
- * @param values Array of Data (key, value)
- */
-String ArduinoWebTemplate::render(Data * values)
-{
-  String str = String(this->header) + String(this->body) + String(this->footer);
-  for (int i=0; i<sizeof(values); i++)
-  {
-      str.replace("{{"+(String)values[i].key+"}}", values[i].value);
-  }
-  return str;
 }
 
